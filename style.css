@@ -1,0 +1,350 @@
+:root {
+    --primary: #ffb347;   /* warm orange */
+    --secondary: #f7cac9; /* pastel pink */
+    --accent1: #6dd5ed;   /* sky blue */
+    --accent2: #b19cd9;   /* lavender */
+    --accent3: #ffe156;   /* yellow bead */
+    --accent4: #71e1d7;   /* mint */
+    --accent5: #ff6f61;   /* coral */
+    --text: #212121;
+    --white: #fff;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --font: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(120deg, var(--secondary) 0%, var(--primary) 100%);
+    font-family: var(--font);
+    color: var(--text);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 7vw;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent5);
+    font-weight: 600;
+    margin: 0 16px;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent2);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 7vw 40px 7vw;
+    background: linear-gradient(135deg, var(--accent1) 0%, var(--secondary) 100%);
+    min-height: 380px;
+    gap: 32px;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.hero-content h2 {
+    font-size: 2.4rem;
+    color: var(--accent5);
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.cta-btn, .cta-outline {
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: var(--font);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+
+.cta-btn {
+    background: linear-gradient(90deg, var(--primary), var(--accent5));
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.cta-btn:hover {
+    background: linear-gradient(90deg, var(--accent5), var(--primary));
+}
+
+.cta-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.cta-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.hero-image img {
+    width: 320px;
+    max-width: 90vw;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 5px dotted var(--accent2);
+}
+
+.products {
+    padding: 48px 6vw;
+    background: var(--accent3);
+    position: relative;
+    overflow: hidden;
+}
+
+.products h3 {
+    font-size: 2rem;
+    color: var(--accent5);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 30px 24px 20px 24px;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 3px dashed var(--accent2);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.product-card h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.custom-request, .purchase-section {
+    background: var(--accent4);
+    padding: 48px 6vw;
+}
+
+.custom-request h3, .purchase-section h3 {
+    text-align: center;
+    color: var(--accent5);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 430px;
+    margin: 0 auto 20px auto;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+input, select, textarea {
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.5px solid var(--accent2);
+    font-size: 1rem;
+    font-family: var(--font);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+    max-height: 180px;
+}
+
+#requestMessage, #purchaseMessage {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--accent5);
+    margin-top: 10px;
+}
+
+footer {
+    background: var(--primary);
+    text-align: center;
+    padding: 18px 0;
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.bead-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        gap: 36px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-image img {
+        width: 90vw;
+        max-width: 350px;
+    }
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 4vw;
+    }
+    .logo {
+        width: 44px;
+        height: 44px;
+    }
+    .main-header h1 {
+        font-size: 1.4rem;
+    }
+    .products {
+        padding: 24px 2vw;
+    }
+    .custom-request, .purchase-section {
+        padding: 24px 2vw;
+    }
+}
+
+/* Beads decorations */
+body:before, body:after, .products:before, .products:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+body:before {
+    width: 85px; height: 85px;
+    background: var(--accent1);
+    left: 2vw; top: 6vw;
+}
+body:after {
+    width: 60px; height: 60px;
+    background: var(--accent2);
+    right: 2vw; top: 4vw;
+}
+.products:before {
+    width: 40px; height: 40px;
+    background: var(--accent4);
+    left: 5vw; bottom: 7vw;
+}
+.products:after {
+    width: 36px; height: 36px;
+    background: var(--accent5);
+    right: 8vw; bottom: 5vw;
+}
+
+/* Extra bead backgrounds for product cards */
+.bead-bg-1 {
+    background: repeating-linear-gradient(135deg, #ffe156 0 20px, #f7cac9 20px 40px, #b19cd9 40px 60px, #71e1d7 60px 80px);
+}
+.bead-bg-2 {
+    background: repeating-linear-gradient(135deg, #6dd5ed 0 20px, #ffb347 20px 40px, #ffe156 40px 60px, #b19cd9 60px 80px);
+}
+
+/* Add butterfly, animal, letter beads as emoji decorations */
+.hero-content:after {
+    content: '🦋 🐻 🐰 🐝 🅰️ 🅱️ 🅾️';
+    display: block;
+    font-size: 2.1rem;
+    margin-top: 14px;
+    letter-spacing: 8px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
